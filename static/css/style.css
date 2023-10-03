@@ -1,0 +1,82 @@
+body{
+    background-color: #E1ECF0;
+}
+/* navbar */
+#logo{
+    font-size: 250%;
+    font-weight: 300;
+    color: #6c9adf;
+    font-family: 'Abril Fatface', serif;
+
+    float: left; 
+    margin-left: 25px;
+    
+    letter-spacing: 0.5px;
+    word-spacing: 10px;
+    line-height: 75px;
+}
+header{
+    padding-bottom: 20px;
+}
+#nav-bar > li{
+    font-size: 125%;
+    font-weight: 100;
+    list-style-type: none;
+    margin-right: 25px;
+}
+
+#nav-bar{
+    display: flex;
+    float: right;
+    margin-top: 25px;
+}
+
+#nav-bar a{
+    text-decoration: none; 
+    color: #2E3033; 
+    font-family: "Montserrat", "sans serif";
+}
+
+.btn {
+    font-family: "Montserrat", "sans serif";
+    font-size: 100%;
+    line-height: 1;
+}
+
+/* footer */
+footer{
+    height: 200px;
+    margin-top: 2%;
+}
+
+#links{
+    text-align: center;
+}
+
+#links > li{
+    display: inline;
+}
+
+#links i{
+    color: #6c9adf;
+    font-size: 200%;
+    padding: 50px;
+}
+
+/* posts */
+/* post_detail.html */
+/* .post-image{
+    width: 230px;
+    height: 290px;
+    margin-left: 40%;
+    border-radius: 12px;
+}
+
+#post-container{
+    display: flex;
+}
+#info{
+    margin-left: 10%;
+}
+#text{
+    padding: 2% 7%; */
