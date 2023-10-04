@@ -80,3 +80,13 @@ footer{
 }
 #text{
     padding: 2% 7%; */
+
+body{
+    margin-left: 25px;
+}
+
+/* add blog post page */
+form{
+    width: 60%;
+    margin-left: 20%;
+}

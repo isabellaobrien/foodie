@@ -4,6 +4,6 @@
 <h1>{{ post.title }}</h1>
 <small>By {{ post.author.first_name }} {{ post.author.last_name }}</small><hr>
 {{post.body}}
-</br>
-<a href="{% url 'home' %}">back</a>
+</br></br></br>
+<a href="{% url 'home' %}" class="btn btn-secondary">back</a>
 {% endblock %}

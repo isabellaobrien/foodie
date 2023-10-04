@@ -4,7 +4,7 @@
 <html class="h-100">
 
 <head>
-    <title>Food Blog</title>
+    <title>Foodie</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -23,11 +23,11 @@
 
     <!-- Navigation -->
     <header>
-        <a href="#"><h1 id="logo">Foodie</h1></a>
+        <a href="{% url 'home' %}"><h1 id="logo">Foodie</h1></a>
         <nav>
             <ul id="nav-bar">
                 <li>
-                    <a href="#">Home</a>
+                    <a href="{% url 'home' %}">Home</a>
                 </li>
                 <li>
                     <a href="#">Recipes</a>
@@ -41,6 +41,7 @@
                           My profile
                         </button>
                         <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="{% url 'add-post' %}">Make post</a></li>
                           <li><a class="dropdown-item" href="#">My posts</a></li>
                           <li><a class="dropdown-item" href="#">My comments</a></li>
                           <li><a class="dropdown-item" href="#">Saved recipes</a></li>
