@@ -2,7 +2,9 @@
 
 {% block content %}
 <h1>{{ post.title }}</h1>
-<small>By {{ post.author.first_name }} {{ post.author.last_name }}</small><hr>
+<small>By {{ post.author.first_name }} {{ post.author.last_name }}</small>
+<a href="{% url 'update-post' post.pk %}" class="btn btn-primary">Edit</a>
+<hr>
 {{post.body}}
 </br></br></br>
 <a href="{% url 'home' %}" class="btn btn-secondary">back</a>
