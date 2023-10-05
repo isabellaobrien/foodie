@@ -9,7 +9,8 @@
                     <h5 class="card-title"> {{ post.title }}</h5><p class="author"> By {{ post.author }}</p>
                     <p class="card-text">{{ post.excerpt }}</p>
                     <a href="{% url 'post-details' post.pk %}" class="btn btn-primary">read more</a>
-                    <a href="{% url 'update-post' post.pk %}" class="btn btn-primary">Edit</a>
+                    <a href="{% url 'update-post' post.pk %}" class="btn btn-success">Edit</a>
+                    <a href="{% url 'delete-post' post.pk %}" class="btn btn-danger">Delete</a>
                     <hr>
                 </div>
             </div>
