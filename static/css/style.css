@@ -79,7 +79,7 @@ footer{
     margin-left: 10%;
 }
 #text{
-    padding: 2% 7%; */
+    padding: 2% 7%;*/
 
 body{
     margin-left: 25px;
@@ -89,4 +89,19 @@ body{
 form{
     width: 60%;
     margin-left: 20%;
+}
+.btn-default {
+    line-height: 2;
+    width: 20%;
+    background-color: #48D1CC;
+}
+.btn-default:hover {
+    background-color: 	#20B2AA;
+    color: white;
+}
+
+
+/* posts */
+.col-md-auto{
+    padding-bottom: 5%;
 }
