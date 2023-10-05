@@ -3,6 +3,7 @@
 {% block content %}
 <h3>Delete {{ post.title }}</h3>
 </br>
+{% if user.is_authenticated %}
 <div class="form-group">
     <form method="POST">
         {% csrf_token %}
@@ -11,6 +12,9 @@
         <button class="btn btn-default">Delete Post</button>
     </form>
 </div>
+{% else %}
+you are not allowed to make posts yet, you need to register/login.
+{% endif %}
 
 
 {% endblock %}

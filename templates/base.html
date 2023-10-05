@@ -41,10 +41,16 @@
                           My profile
                         </button>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="{% url 'add-post' %}">Make post</a></li>
-                          <li><a class="dropdown-item" href="#">My posts</a></li>
-                          <li><a class="dropdown-item" href="#">My comments</a></li>
-                          <li><a class="dropdown-item" href="#">Saved recipes</a></li>
+                            {% if user.is_authenticated %}
+                            <li><a class="dropdown-item" href="{% url 'add-post' %}">Make post</a></li>
+                            <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                            {% else %}
+                            <li><a class="dropdown-item" href="{% url 'register' %}">Register</a></li>
+                            <li><a class="dropdown-item" href="{% url 'login' %}">Login</a></li>
+                            {% endif %}
+                            <!-- <li><a class="dropdown-item" href="#">My posts</a></li>
+                            <li><a class="dropdown-item" href="#">My comments</a></li>
+                            <li><a class="dropdown-item" href="#">Saved recipes</a></li> -->
                         </ul>
                     </div>
                 </li>

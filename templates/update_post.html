@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% if user.is_authenticated %}
 <h1>Edit...</h1>
 <div class="form-group">
     <form method="POST">
@@ -9,6 +10,9 @@
         <button class="btn btn-default">Edit</button>
     </form>
 </div>
+{% else %}
+you are not allowed to edit posts yet, you need to register/login.
+{% endif%}
 
 
 {% endblock %}
