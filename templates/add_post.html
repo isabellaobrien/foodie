@@ -9,6 +9,10 @@
         <button class="btn btn-default">Post</button>
     </form>
 </div>
+<script>
+    var name = "{{ user.id }}";
+    document.getElementById('bella').value = name;
+</script>
 {% else %}
 you are not allowed to make posts yet, you need to register/login.
 {% endif %}

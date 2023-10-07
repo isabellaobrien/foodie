@@ -4,14 +4,16 @@
 <h3>Delete {{ post.title }}</h3>
 </br>
 {% if user.is_authenticated %}
-<div class="form-group">
-    <form method="POST">
-        {% csrf_token %}
-        <strong>Are you sure??</strong>
-        </br></br></br>
-        <button class="btn btn-default">Delete Post</button>
-    </form>
-</div>
+    {% if user.id == post.author.id %}
+    <div class="form-group">
+        <form method="POST">
+            {% csrf_token %}
+            <strong>Are you sure??</strong>
+            </br></br></br>
+            <button class="btn btn-default">Delete Post</button>
+        </form>
+    </div>
+    {% endif %}
 {% else %}
 you are not allowed to make posts yet, you need to register/login.
 {% endif %}
