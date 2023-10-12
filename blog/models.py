@@ -3,11 +3,13 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from datetime import datetime, date
 from ckeditor.fields import RichTextField
+from cloudinary.models import CloudinaryField
 #from cloudinary.models import CloudinaryField
 # Create your models here.
 
 class Post(models.Model):
     title = models.CharField(max_length=255)
+    image = CloudinaryField('image', default='placeholder')
     excerpt = models.TextField(blank=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     # body = models.TextField()

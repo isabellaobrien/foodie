@@ -8,6 +8,9 @@
         <small>By {{ post.author }}</small>
         <small>{{ post.date }}</small>
         </br>
+        {% if post.image %}
+            <img src="{{ post.image.url }}" alt="blog post image">
+        {% endif %}
         {% if user.is_authenticated %}
             {% if user.id == post.author.id %}
             <a href="{% url 'update-post' post.pk %}" class="btn btn-success">Edit</a>
