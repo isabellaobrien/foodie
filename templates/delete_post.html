@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h3>Delete {{ post.title }}</h3>
+<h3 class="page-function">Delete -"{{ post.title }}"</h3>
 </br>
 {% if user.is_authenticated %}
     {% if user.id == post.author.id %}
-    <div class="form-group">
+    <div class="form-group delete-form">
         <form method="POST">
             {% csrf_token %}
-            <strong>Are you sure??</strong>
-            </br></br></br>
+            <p>Are you sure you want to delete this post? 
+                This action is irreversable.</p>
             <button class="btn btn-default">Delete Post</button>
         </form>
     </div>

@@ -3,7 +3,7 @@
 {% block content %}
 {% if user.is_authenticated %}
     {% if user.id == post.author.id %}
-    <h1>Edit...</h1>
+    <h3 class="page-function">Edit...</h3>
     <div class="form-group">
         <form method="POST">
             {% csrf_token %}

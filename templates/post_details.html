@@ -8,9 +8,6 @@
         <small>By {{ post.author }}</small>
         <small>{{ post.date }}</small>
         </br>
-        {% if post.image %}
-            <img src="{{ post.image.url }}" alt="blog post image">
-        {% endif %}
         {% if user.is_authenticated %}
             {% if user.id == post.author.id %}
             <a href="{% url 'update-post' post.pk %}" class="btn btn-success">Edit</a>
@@ -40,23 +37,26 @@
         Login to like.
         {% endif %}
     </form>
-    </br></br></br>
-    <h2>Comments...</h2>
-    {% if not post.comments.all %}
-    no comments yet...<a href="{% url 'add-comment' post.pk %}">add one</a>
-    {% else %}
-    <a href="{% url 'add-comment' post.pk %}">add comment</a>
-        </br>
-        {% for comment in post.comments.all %}
-        <strong>
-            {{ comment.name }}
-            {{ comment.date }}
-        </strong>
-        </br>
-            {{ comment.body }}
-        </br>
-        {% endfor %}
-    {% endif %}
+    </br>
+    <div class="comment-container">
+        <h2>Comments...</h2>
+        {% if not post.comments.all %}
+        no comments yet...<a href="{% url 'add-comment' post.pk %}">add one</a>
+        {% else %}
+        <a href="{% url 'add-comment' post.pk %}">add comment</a>
+            </br>
+            {% for comment in post.comments.all %}
+            <strong>
+                {{ comment.name }}
+                {{ comment.date }}
+            </strong>
+            </br>
+                {{ comment.body }}
+            </br></br>
+            {% endfor %}
+        {% endif %}
+    </div>
+    
     </br>
     <a href="{% url 'home' %}" class="btn btn-secondary">back</a>
 </div>

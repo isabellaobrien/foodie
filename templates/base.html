@@ -30,10 +30,7 @@
                     <a href="{% url 'home' %}">Home</a>
                 </li>
                 <li>
-                    <a href="#">Recipes</a>
-                </li>
-                <li>
-                    <a href="#">Contacts</a>
+                    <a href="#footer">Contacts</a>
                 </li>
                 <li>
                     <div class="dropdown">
@@ -42,6 +39,7 @@
                         </button>
                         <ul class="dropdown-menu">
                             {% if user.is_authenticated %}
+                            <li><a class="dropdown-item" href="{% url 'my-posts' %}">My posts</a></li>
                             <li><a class="dropdown-item" href="{% url 'add-post' %}">Make post</a></li>
                             <li><a class="dropdown-item" href="{% url 'edit_profile' %}">Edit profile</a></li>
                             <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
@@ -49,9 +47,6 @@
                             <li><a class="dropdown-item" href="{% url 'register' %}">Register</a></li>
                             <li><a class="dropdown-item" href="{% url 'login' %}">Login</a></li>
                             {% endif %}
-                            <!-- <li><a class="dropdown-item" href="#">My posts</a></li>
-                            <li><a class="dropdown-item" href="#">My comments</a></li>
-                            <li><a class="dropdown-item" href="#">Saved recipes</a></li> -->
                         </ul>
                     </div>
                 </li>
@@ -66,7 +61,7 @@
     </main>
 
     <!-- footer -->
-    <footer>
+    <footer id="footer">
         <ul id="links">
             <li>
                 <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="link to our facebook page(opens in a new tab)"><i class="fa-brands fa-facebook"></i></i></a>

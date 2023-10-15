@@ -5,22 +5,12 @@
         {% for post in post_list %}
         <div class="col-md-auto">
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="https://htmlcolorcodes.com/assets/images/colors/neon-orange-color-solid-background-1920x1080.png" alt="Card image cap">
+                <img class="post-image" src="{{ post.image.url }}" alt="Card image ">
+
                 <div class="card-body">
                     <h5 class="card-title"> {{ post.title }}</h5>
-                    {% if user.id == post.author.id %}
-                        <i class="fa-solid fa-thumbtack pin"></i>
-                    {% endif %}
-
                     <p class="card-text">{{ post.excerpt }}</p>
-                    
                     <a href="{% url 'post-details' post.pk %}" class="btn btn-default">read more</a>
-                    <!-- {% if user.is_authenticated %}
-                        {% if user.id == post.author.id %}
-                        <a href="{% url 'update-post' post.pk %}" class="btn btn-success">Edit</a>
-                        <a href="{% url 'delete-post' post.pk %}" class="btn btn-danger">Delete</a>
-                        {% endif %}
-                    {% endif %} -->
                     <hr>
                     <small class="author"> By {{ post.author }}</small>
                 </div>
