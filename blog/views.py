@@ -1,11 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from .models import Post, Comment
+from .models import Post, Comment, Category
 from .forms import PostForm, CommentForm
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
-# def home(request):
-#     return render(request, 'index.html', {})
+
 
 def Likes(request, pk):
     post = get_object_or_404(Post, id=request.POST.get('post_id'))
@@ -47,19 +46,24 @@ class AddPost(CreateView):
     model = Post
     form_class = PostForm
     template_name = 'add_post.html'
-    #fields = '__all__'
-    # fields = ('title', 'body')
+
+class AddCategory(CreateView):
+    model = Category
+    template_name = 'add_category.html'
+    fields = '__all__'
+
+def Category(request, categories):
+    category_posts = Post.objects.filter(category=categories)
+    return render(request, "categories.html", {'categories': categories, "category_posts": category_posts})
 
 class AddComment(CreateView):
     model = Comment
     form_class = CommentForm
     template_name = 'add_comment.html'
-    # fields = '__all__'
     def form_valid(self, form):
         form.instance.post_id = self.kwargs['pk']
         return super().form_valid(form)
-    success_url = reverse_lazy('home')
-
+    success_url = reverse_lazy("home")
 
 class UpdatePost(UpdateView):
     model = Post

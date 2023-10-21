@@ -41,6 +41,7 @@
                             {% if user.is_authenticated %}
                             <li><a class="dropdown-item" href="{% url 'my-posts' %}">My posts</a></li>
                             <li><a class="dropdown-item" href="{% url 'add-post' %}">Make post</a></li>
+                            <li><a class="dropdown-item" href="{% url 'add-category' %}">Add category</a></li>
                             <li><a class="dropdown-item" href="{% url 'edit_profile' %}">Edit profile</a></li>
                             <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
                             {% else %}

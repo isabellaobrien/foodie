@@ -65,46 +65,31 @@ footer{
     padding: 50px;
 }
 
-/* posts */
-/* post_detail.html */
-
-
-/*#post-container{
-    display: flex;
-}
-#info{
-    margin-left: 10%;
-}
-#text{
-    padding: 2% 7%;*/
-
-
-/* add blog post page */
+/* edit, delete register, login forms */
 form{
     width: 60%;
     margin-left: 20%;
 }
-/*.btn-default {
-    line-height: 2;
-    width: 20%;
-    background-color: #48D1CC;
+
+.delete-form{
+    margin-left: 10%;
+    padding-bottom: 100px;
 }
-.btn-default:hover {
-    background-color: 	#20B2AA;
-    color: white;
-}  */
+.page-function{
+    margin-left: 40%;
+    padding-bottom: 3%;
+}
+
+/* posts index.html */
 .post-image {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     overflow: hidden;
     width: 100%;
-    /* height: 275px; */
     border-radius: 2px;
 
 }
-
-/* posts */
 .col-md-auto{
     padding-bottom: 5%;
 }
@@ -120,14 +105,6 @@ form{
 .author{
     text-align: center;
 }
-.btn-default{
-    border: 1px solid black;
-}
-.btn-default:hover{
-    border: 1px solid white;
-    color: white;
-    background-color: black;
-}
 
 .blog-title{
     font-family: 'Oswald', sans-serif;
@@ -136,6 +113,16 @@ form{
     padding: 0 5%;
     font-size: 20px;
 }
+/* all buttons */
+.btn-default{
+    border: 1px solid black;
+}
+.btn-default:hover{
+    border: 1px solid white;
+    color: white;
+    background-color: black;
+}
+/* individual post in post-detail.html */
 .container{
     background-color: white;
 }
@@ -158,12 +145,10 @@ form{
 .like-form{
     margin-left: 5%;
 }
-
-
-.page-function{
-    margin-left: 40%;
-    padding-bottom: 3%;
+.btn-back{
+    margin-left: 5%;
 }
+
 
 .comment-container{
     margin-left: 5%;
@@ -171,8 +156,4 @@ form{
     padding: 5%;
     border-radius: 10px;
     width: 80%;
-}
-
-.delete-form{
-    margin-left: 10%;
 }

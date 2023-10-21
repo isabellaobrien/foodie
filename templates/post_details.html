@@ -4,7 +4,7 @@
 
 <div class="container">
     <div class="title-container">
-        <h1 class="blog-title">{{ post.title }}</h1>
+        <h1 class="blog-title">{{ post.title }} - <a href="{% url 'category' post.category %}">{{ post.category }}</a></h1>
         <small>By {{ post.author }}</small>
         <small>{{ post.date }}</small>
         </br>
@@ -58,7 +58,8 @@
     </div>
     
     </br>
-    <a href="{% url 'home' %}" class="btn btn-secondary">back</a>
+    <a href="{% url 'home' %}" class="btn btn-secondary btn-back">back</a>
+    </br></br></br>
 </div>
 
 

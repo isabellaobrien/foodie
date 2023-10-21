@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+    {% if category_posts%}
+    <h1> {{ categories }} </h1>
+    <div class="container-fluid">
+        <div class="row">
+            {% for post in category_posts %}
+            <div class="col-md-auto">
+                <div class="card" style="width: 18rem;">
+                    {% if "placeholder" in post.image.url %}
+                    <img class="card-img-top"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/310px-Placeholder_view_vector.svg.png">
+                    {% else %}
+                    <img src="{{ post.image.url  }}" class="post-image" alt="blog post image">
+                    {% endif %}
+
+                    <div class="card-body">
+                        <h5 class="card-title"> {{ post.title }}</h5>
+                        <p class="card-text">{{ post.excerpt }}</p>
+                        <a href="{% url 'post-details' post.pk %}" class="btn btn-default">read more</a>
+                        <hr>
+                        <small class="author"> By {{ post.author }}</small>
+                    </div>
+                </div>
+            </div>
+            
+            {% endfor %}
+        </div>
+    </div>
+    {% else %}
+    <h2> sorry, this page does not exist</h2>
+    {% endif %}
+{% endblock %}
