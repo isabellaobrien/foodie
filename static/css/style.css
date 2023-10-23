@@ -81,15 +81,7 @@ form{
 }
 
 /* posts index.html */
-.post-image {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    width: 100%;
-    border-radius: 2px;
 
-}
 .col-md-auto{
     padding-bottom: 5%;
 }
