@@ -14,12 +14,19 @@ class Category(models.Model):
     def get_absolute_url(self):
         return reverse('home')
 
+class Difficulty(models.Model):
+    level = models.CharField(max_length=255)
+        
+    def __str__(self):
+        return self.level
+
 class Post(models.Model):
     title = models.CharField(max_length=255)
     image = CloudinaryField('image', default='placeholder')
     excerpt = models.TextField(blank=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     category = models.CharField(max_length=255, default="food")
+    difficulty = models.CharField(max_length=255, default="medium")
     body = RichTextField(blank=True, null=True)
     date = models.DateField(auto_now_add=True)
     likes = models.ManyToManyField(User, related_name="blog_posts",)

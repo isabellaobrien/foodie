@@ -149,3 +149,17 @@ form{
     border-radius: 10px;
     width: 80%;
 }
+
+/* difficulty buttons in index.html */
+
+.easy{
+    color: green;
+}
+
+.medium{
+    color: yellow;
+}
+
+.hard{
+    color: red;
+}

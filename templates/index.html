@@ -20,6 +20,13 @@
                 <div class="card-body">
                     <h5 class="card-title"> {{ post.title }}</h5>
                     <p class="card-text">{{ post.excerpt }}</p>
+                    {% if post.difficulty == "easy" %}
+                        <p><i class="fa-solid fa-circle easy"></i> easy</p>
+                    {% elif post.difficulty == "medium" %}
+                        <p><i class="fa-solid fa-circle medium"></i> medium</p>
+                    {% elif post.difficulty == "hard" %}
+                        <p><i class="fa-solid fa-circle hard"></i> hard</p>
+                    {% endif %}
                     <a href="{% url 'post-details' post.pk %}" class="btn btn-default">read more</a>
                     <hr>
                     <small class="author"> By {{ post.author }}</small>
