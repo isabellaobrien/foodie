@@ -60,7 +60,7 @@ footer{
 #links i{
     color: #6c9adf;
     font-size: 200%;
-    padding: 50px;
+    padding: 3%;
 }
 
 /* edit, delete register, login forms */
@@ -160,4 +160,8 @@ form{
 
 .hard{
     color: red;
+}
+
+.row{
+    margin-left: 50px;
 }
