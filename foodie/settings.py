@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'cloudinary',
     'blog',
     'members',
-    'ckeditor',
+    # 'ckeditor',
+    'django_quill',
 ]
 
 MIDDLEWARE = [

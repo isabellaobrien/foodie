@@ -2,7 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 from datetime import datetime, date
-from ckeditor.fields import RichTextField
+# from ckeditor.fields import RichTextField
+from django_quill.fields import QuillField
 from cloudinary.models import CloudinaryField
 
 class Category(models.Model):
@@ -27,7 +28,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     category = models.CharField(max_length=255, default="food")
     difficulty = models.CharField(max_length=255, default="medium")
-    body = RichTextField(blank=True, null=True)
+    body = QuillField(default="body")
     date = models.DateField(auto_now_add=True)
     likes = models.ManyToManyField(User, related_name="blog_posts",)
 
