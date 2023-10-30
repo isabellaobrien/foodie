@@ -2,6 +2,8 @@
 Foodie is a food blog, it is for anyone who loves food, cooking and sharing recipes or who would like to learn to cook.
 Foodie users can register for an account which gives them some added perks. Users without an account can still access the blog and read posts, they can’t interact with them. Users can contact the blog director through social media which is linked in the footer.
 
+[Link to live project](https://my-foodie-blog-c16c6ec88ef7.herokuapp.com//)
+
 ![screenshot of the landing page](/media/images/Screenshot%20(54).png)
 
 ### features:
@@ -81,6 +83,31 @@ Foodie users can register for an account which gives them some added perks. User
 
 ![screenshot of the category page](/media/images/Screenshot%20(68).png)
 
+
+### testing:
+
+| Action | Expected behaviour | Pass or Fail |
+|---|---|---|
+| Enter URL in browser | the landing page of the website should display on the screen | Pass |
+| Click Home on the navigation bar | the home page should show up on the screen | Pass |
+| Click Logo on the navigation bar | the home page should show up on the screen | Pass |
+| Click Contact on the navigation bar| the social media links in the footer should show up on the screen | Pass |
+| Click my profile (not logged in) on the navigation bar | A dropdown menu should appear containing ‘register’ and ‘login’. | Pass |
+| Click my profile (logged in) on the navigation bar | A dropdown menu should appear containing ‘my posts’, ‘make post’, ‘add category’, ‘edit profile’, ‘logout’| Pass |
+| Click Register in the dropdown menu | You should be redirected to a registration form | Pass |
+| Click Login in the dropdown menu | You should be redirected to a login form | Pass |
+| Click My posts in the dropdown menu | A page containing all of the user’s posts should appear | Pass |
+| Click Make post in the dropdown menu | A form containing six fields (title, excerpt, category, difficulty, body and image) should appear | Pass |
+| Click Add category in the dropdown menu | A form containing a field (category) should appear | Pass |
+| Click Edit profile the dropdown menu | A form containing four fields (username, first name, last name and email) and a link to the password changing form should appear | Pass |
+| Click Logout in the dropdown menu | the user should be redirected to the home page | Pass |
+| Click the ‘read more’ button on a post | The post detail page should appear | Pass |
+| Click the category link  next to the post title | A page with other posts belonging to that category should appear | pass |
+| Click the edit button underneath  the post title | The user should be redirected to the update post page | pass |
+| Click the delete button underneath the post title | The user should be redirected to the delete post page | pass |
+| Click the like button under the post body | A like should be added to the count and the should be black. If you click again the count should go down and the like button should go from black to white | pass |
+| Click the ‘add one’  link  in the comment section | A comment  form containing 2 fields (name, body) | pass |
+| Click the back button at the end of the post | Takes the user back to the home page | pass |
 
 
 
