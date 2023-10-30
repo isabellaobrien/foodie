@@ -1,2 +1,5 @@
-What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+# Foodie
+Foodie is a food blog, it is for anyone who loves food, cooking and sharing recipes  or who would like to learn to cook.
+Foodie users can register for an account which allows them to create posts, like other users posts and comment on them. Users without an account can still access the blog and read posts, they can’t interact with them. Users can contact the blog director through social media which is linked in the footer
+![screenshot of the landing page](/media/images/Screenshot%20(54).png)
+
