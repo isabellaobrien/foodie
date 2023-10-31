@@ -1,16 +1,16 @@
 # Foodie
 Foodie is a food blog, it is for anyone who loves food, cooking and sharing recipes or who would like to learn to cook.
-Foodie users can register for an account which gives them some added perks. Users without an account can still access the blog and read posts, they can’t interact with them. Users can contact the blog director through social media which is linked in the footer.
+Foodie users can register for an account which gives them some added perks. Users without an account can still access the blog and read posts, but they can’t interact with them. Users can contact the blog director through social media which is linked in the footer.
 
-[Link to live project](https://my-foodie-blog-c16c6ec88ef7.herokuapp.com//)
+[Link to live project](https://my-foodie-blog-c16c6ec88ef7.herokuapp.com/)
 
 ![screenshot of the landing page](/media/images/Screenshot%20(54).png)
 
-### features:
+## features:
 * Navigation
     * The navigation bar is situated at the top of each page and contains the website logo which links to the home page.
     * The navigation bar also contains links to the home, contacts and my profile(dropdown menu). The dropdown menu changes based on whether a user is logged in or not.
-    * If the user is not logged in my profile contains a register and login. Once the user is logged in my profile contains : my posts, make post, add category, edit profile, logout
+    * If the user is not logged in my profile contains a register and login. Once the user is logged in my profile contains : my posts, make post, add category, edit profile, logout.
     * The navigation bar gives the user easy access to each part of the website, on all devices.
 
 ![screenshot of the navbar when logged out](/media/images/Screenshot%20(56).png)
@@ -30,7 +30,9 @@ Foodie users can register for an account which gives them some added perks. User
     * At the bottom of the post the user can find a like button, a comment section and a back button.
 
 ![screenshot of the post when the user is not the author](/media/images/Screenshot%20(57).png)
+
 ![screenshot of the post when the user is the author](/media/images/Screenshot%20(59).png)
+
 ![screenshot of like button and comment section](/media/images/Screenshot%20(58).png)
 
 * Register
@@ -43,6 +45,7 @@ Foodie users can register for an account which gives them some added perks. User
 * Login
     * It allows the user to login to Foodie and access their profile.
     * Once the user has logged in, the user has access to my posts page, make post page, edit profile page, add category page.
+
 ![screenshot of the login form](/media/images/Screenshot%20(61).png)
 
 * Edit profile
@@ -77,6 +80,9 @@ Foodie users can register for an account which gives them some added perks. User
 
 ![screenshot of the category page](/media/images/Screenshot%20(67).png)
 
+* My posts page
+    * The page that contains all of the user's posts, so that they are easily accessible.
+
 * Footer
     * The footer is situated at the very bottom of each web page and contains links to Foodie’s social media accounts (Facebook, Twitter, Instagram and Youtube), these links will open in separate pages.
     * It allows the user to contact Foodie directly.
@@ -84,13 +90,13 @@ Foodie users can register for an account which gives them some added perks. User
 ![screenshot of the category page](/media/images/Screenshot%20(68).png)
 
 
-### testing:
+## testing:
 
 | Action | Expected behaviour | Pass or Fail |
 |---|---|---|
 | Enter URL in browser | the landing page of the website should display on the screen | Pass |
 | Click Home on the navigation bar | the home page should show up on the screen | Pass |
-| Click Logo on the navigation bar | the home page should show up on the screen | Pass |
+| Click the logo on the navigation bar | the home page should show up on the screen | Pass |
 | Click Contact on the navigation bar| the social media links in the footer should show up on the screen | Pass |
 | Click my profile (not logged in) on the navigation bar | A dropdown menu should appear containing ‘register’ and ‘login’. | Pass |
 | Click my profile (logged in) on the navigation bar | A dropdown menu should appear containing ‘my posts’, ‘make post’, ‘add category’, ‘edit profile’, ‘logout’| Pass |
@@ -105,9 +111,34 @@ Foodie users can register for an account which gives them some added perks. User
 | Click the category link  next to the post title | A page with other posts belonging to that category should appear | pass |
 | Click the edit button underneath  the post title | The user should be redirected to the update post page | pass |
 | Click the delete button underneath the post title | The user should be redirected to the delete post page | pass |
-| Click the like button under the post body | A like should be added to the count and the should be black. If you click again the count should go down and the like button should go from black to white | pass |
-| Click the ‘add one’  link  in the comment section | A comment  form containing 2 fields (name, body) | pass |
+| Click the like button under the post body | A like should be added to the count and the heart icon should be black. If you click again the count should go down and the like button should go from black to white | pass |
+| Click the ‘add one’  link  in the comment section | A comment  form containing 2 fields (name, body)  should appear | pass |
 | Click the back button at the end of the post | Takes the user back to the home page | pass |
+| Click 'comment', 'make post', 'delete', 'update post', 'add category', 'edit profile', 'login', 'register', 'logout' buttons | should take the user back to the home page | pass |
 
+#### remaining bugs:
+I have confirmed that the web page is responsive by accessing the website through other devices(iphone, ipad), but I encountered an [issue](https://ui.dev/amiresponsive?url=https://my-foodie-blog-c16c6ec88ef7.herokuapp.com/) using 'amiresponsive?'.
+
+
+## validator testing:
+* I've passed the code through a python linter and confirmed that there are no errors that impact its functionality. I used  [Python syntax checker](https://extendsclass.com/python-tester.html).
+* I tested the HTML with the [W3C markup validation](https://validator.w3.org/) service and no errors or warnings were returned.
+* I tested the CSS with the [W3C CSS validation](https://jigsaw.w3.org/css-validator/) service and no errors were found.
+* I confirmed the website's accessibility and readability by using lighthouse on devtools.
+
+![screenshot of the lighthouse results](/media/images/Screenshot%20(69).png)
+
+## deployment:
+* I made sure the libraries used were stored in the requirements.txt file.
+* I clicked on "create an app" in heroku, I named the app and selected my region.
+* I went to settings and added the config vars I needed.
+* I then went to deploy, connected to github.
+* I then manually deployed my project.
+
+## credits:
+* [Pexels](https://www.pexels.com/) for the blog images.
+* [Google fonts](https://fonts.google.com/).
+* [Font awesome](https://fontawesome.com/).
+* [bbc food](https://www.bbcgoodfood.com/) for the recipes in the blog posts.
 
 
